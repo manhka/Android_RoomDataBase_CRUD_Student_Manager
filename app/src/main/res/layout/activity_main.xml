@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="#E53935">
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnAddNewStudent"
+           android:layout_marginTop="5dp"
+            android:background="@drawable/ic_baseline_add_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/btnAddNewStudent"
+            android:layout_weight="8"
+            android:background="@drawable/custom_edittext"
+            android:gravity="center"
+            android:hint="Enter Student Name"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/editTextSearch"
+            android:background="@drawable/ic_baseline_search_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:layout_marginTop="20dp"
+        android:layout_weight="8"
+        android:layout_margin="5dp"
+        android:id="@+id/recycleviewStudent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
